@@ -40,29 +40,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
     firebaseRequestPermission();
     firebaseSetupListener();
-
-    //
-    // onMessage = will be triggered while notif is received while app is opened/active
-    // messaging.configure(onMessage: (message) async {
-    //   debugPrint("isi message yang diterima pada ${waktu}");
-    //   debugPrint(message.toString());
-    //   //
-    //   setState(() {
-    //     messageTitle = message["notification"]["title"];
-    //     notificationAlert = "New Notif Alert!";
-    //   });
-    // },
-    //     //onResume will be triggered while we receive the notification alert in the device notification bar
-    //     //and opens the app through the push notification itself.
-    //     onResume: (message) {
-    //   debugPrint("isi message yang diterima");
-    //   debugPrint(message.toString());
-    //   setState(() {
-    //     //
-    //     messageTitle = message["data"]["title"];
-    //     notificationAlert = "App opened from notip";
-    //   });
-    // });
   }
 
   firebaseRequestPermission() async {
