@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:intl/intl.dart';
 
 void main() async {
@@ -29,9 +30,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String messageTitle = "empty";
   String notificationAlert = "alert";
-
+  //
   FirebaseMessaging messaging = FirebaseMessaging.instance;
   //
+  var localNotif = FlutterLocalNotificationsPlugin();
 
   @override
   void initState() {
@@ -65,15 +67,20 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  firebaseSetupListener() {
+  firebaseSetupListener() async {
     String waktu = DateFormat("HH:mm").format(DateTime.now());
 
-    FirebaseMessaging.onMessage.listen((RemoteMessage notif) {
+    FirebaseMessaging.onMessage.listen((RemoteMessage notif) async {
       debugPrint("isi notif yang diterima pada ${waktu}");
       debugPrint(notif.toString());
       debugPrint(notif.notification.toString());
       debugPrint(notif.notification.title);
       //
+      await localNotif.show(
+          0,
+          notif.notification.title,
+          notif.notification.body,
+          NotificationDetails(iOS: IOSNotificationDetails()));
       setState(() {
         messageTitle = notif.notification.title;
         notificationAlert = "New Notif Alert!";
