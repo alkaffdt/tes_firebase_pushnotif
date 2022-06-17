@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "503132038004",
+    "project_id": "good-news-280ee",
+    "storage_bucket": "good-news-280ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503132038004:android:feda9c863e1aed6e204221",
+        "android_client_info": {
+          "package_name": "com.prixa.latihan_firebase_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503132038004-1t673oos2ulr76jm52stq1ul68kvtu0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcNo-x2maycqAFMxmre9E6JBTLhvGE9iI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "503132038004-1t673oos2ulr76jm52stq1ul68kvtu0t.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "503132038004-kssslk34s7obgq0sler8l7j7kai83fiq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.latihanPushNotif.GoodNews"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
